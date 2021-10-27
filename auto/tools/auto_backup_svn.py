@@ -32,8 +32,8 @@ for u_name in up_list:
     os.system("cd ../../{file} && svn up".format(file=u_name))
 
 # 将config: develop -> release
-# os.system("cd ../../config/release && rm -rf excels && cd .. && cp -R develop/excels release/excels")
-# os.system("cd ../../config/release && svn add . --force && svn commit -m 'auto: config develop to release'")
+os.system("cd ../../config/release && rm -rf excels && cd .. && cp -R develop/excels release/excels")
+os.system("cd ../../config/release && svn add . --force && svn commit -m 'auto: config develop to release'")
 
 # 压缩config、FairyGUI、DynamicRes文件
 z_list = {"config", "FairyGUI", "DynamicRes"}

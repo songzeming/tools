@@ -1,6 +1,11 @@
 default:
-    $(info “请输入具体命令：”)
-    $(info “自动备份：make auto_backup”)
-    
+	python ./tools/log.py
+
+unzip_aab:
+	python ./tools/unzip_aab.py
+
 auto_backup:
 	python ./tools/auto_backup.py
+
+auto_backup_svn:
+	python ./tools/auto_backup_svn.py
