@@ -81,6 +81,7 @@ for name, size in filelist.items():
     print('%-20s%-6s%-6s' % (name, turn_mb(size), "MB"))
 
 print("")
-print("热更大小:", turn_mb(diffsize), "MB")
-print("动态资源大小:", turn_mb(dynamicsize), "MB")
-print("热更总大小:", turn_mb(diffsize + dynamicsize), "MB")
+strdiffsize = str(turn_mb(diffsize)) + "MB"
+strdyanmicsize = str(turn_mb(dynamicsize)) + "MB"
+strtotalsize = str(turn_mb(diffsize + dynamicsize)) + "MB"
+print("热更大小: " + strtotalsize + "（热更新: " + strdiffsize + "，动态资源: " + strdyanmicsize + "）")
