@@ -25,7 +25,7 @@ def getmd5(file):
 
 
 def insert_files(file, t):
-    if t == "new":
+    if t == "diff_folder/new":
         filesnew[os.path.basename(file)] = file
     else:
         filesold[os.path.basename(file)] = file
@@ -41,8 +41,8 @@ def find_file(path, t):
             insert_files(file, t)
 
 
-find_file("./old", "old")
-find_file("./new", "new")
+find_file("./diff_folder/old", "diff_folder/old")
+find_file("./diff_folder/new", "diff_folder/new")
 
 
 def calculate(name, file, desc):
@@ -56,7 +56,7 @@ def calculate(name, file, desc):
                 filelist[filesplit5] = 0
             filelist[filesplit5] += filesize
     fileshortname = filefullname.replace('./new/1.1/Bundles/Android', '')
-    print('%-32s%-8s%-6s%-6s%-20s' % (fileshortname, desc, turn_mb(filesize), "MB", name))
+    print('%-70s%-8s%-6s%-6s%-20s' % (fileshortname, desc, turn_mb(filesize), "MB", name))
     return filesize, fileshortname.startswith("/dynamicres")
 
 
@@ -75,10 +75,11 @@ for name, file in filesnew.items():
         else:
             diffsize += f_size
 
-print("")
 
+print("")
 for name, size in filelist.items():
     print('%-20s%-6s%-6s' % (name, turn_mb(size), "MB"))
+
 
 print("")
 strdiffsize = str(turn_mb(diffsize)) + "MB"

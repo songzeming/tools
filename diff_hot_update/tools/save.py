@@ -3,8 +3,8 @@
 
 import shutil
 
-shutil.rmtree("new/", ignore_errors=True)
-shutil.copytree("../../client_online/HotUpdate/", "new/")
+shutil.rmtree("diff_folder/new/", ignore_errors=True)
+shutil.copytree("../../client_online/HotUpdate/", "diff_folder/new/")
 
-shutil.rmtree("old/", ignore_errors=True)
-shutil.copytree("../../client_online/HotUpdate/", "old/")
+shutil.rmtree("diff_folder/old/", ignore_errors=True)
+shutil.copytree("../../client_online/HotUpdate/", "diff_folder/old/")
