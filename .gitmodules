@@ -1,0 +1,3 @@
+[submodule "diff_hot_update/diff_folder"]
+	path = diff_hot_update/diff_folder
+	url = https://github.com/songzeming/diff_folder.git
