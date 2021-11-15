@@ -6,7 +6,8 @@ import os
 import time
 
 # 创建文件夹
-filename_origin = "线上版本备份" + time.strftime("%Y%m%d", time.localtime())
+time_nyr = time.strftime("%Y%m%d", time.localtime())
+filename_origin = "线上版本备份" + time_nyr
 filename = "../../" + filename_origin
 shutil.rmtree(filename, ignore_errors=True)
 os.mkdir(filename)
@@ -31,17 +32,9 @@ up_list = {"config", "FairyGUI", "DynamicRes"}
 for u_name in up_list:
     os.system("cd ../../{file} && svn up".format(file=u_name))
 
-# 将config: develop -> release
-# os.system("cd ../../config/release && rm -rf excels && cd .. && cp -R develop/excels release/excels")
-# os.system("cd ../../config/release && svn add . --force && svn commit -m 'auto: config develop to release'")
-
 # 压缩config、FairyGUI、DynamicRes文件
 z_list = {"config", "FairyGUI", "DynamicRes"}
 for z_name in z_list:
     os.system("echo '正在压缩{file}' && zip -q -r -o '{path}/{file}.zip' ../../{file}".format(file=z_name, path=filename))
-
-# 设置tag并push
-
-# 将release分支合并到master分支
 
 print("备份完成")

@@ -7,5 +7,5 @@ unzip_aab:
 auto_backup:
 	python ./tools/auto_backup.py
 
-auto_backup_svn:
-	python ./tools/auto_backup_svn.py
+auto_backup_online:
+	python ./tools/auto_backup_online.py
