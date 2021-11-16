@@ -9,3 +9,6 @@ auto_backup:
 
 auto_backup_online:
 	python ./tools/auto_backup_online.py
+
+auto_backup_fix_update:
+	python ./tools/auto_backup_fix_update.py
