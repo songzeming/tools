@@ -37,4 +37,7 @@ z_list = {"config", "FairyGUI", "DynamicRes"}
 for z_name in z_list:
     os.system("echo '正在压缩{file}' && zip -q -r -o '{path}/{file}.zip' ../../{file}".format(file=z_name, path=filename))
 
-print("备份完成")
+# 压缩HotUpdate，备份热更文件
+os.system("echo '正在压缩HotUpdate' && cd ../../client_online && zip -q -r -o '../{path}/HotUpdate.zip' HotUpdate".format(path=filename_origin))
+
+print("备份完成\n")
