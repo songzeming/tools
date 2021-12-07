@@ -49,14 +49,14 @@ def calculate(name, file, desc):
     filesize = os.path.getsize(file)
     filefullname = os.path.dirname(file)
     filesplit = filefullname.split('/')
-    if len(filesplit) > 6:
-        filesplit5 = filesplit[6]
+    if len(filesplit) > 5:
+        filesplit5 = filesplit[5]
         if filesplit5 != None or filesplit5 != "":
             if filelist.get(filesplit5, None) == None:
                 filelist[filesplit5] = 0
             filelist[filesplit5] += filesize
-    fileshortname = filefullname.replace('./diff_folder/new/1.1/Bundles/Android', '')
-    print('%-32s%-8s%-6s%-6s%-20s' % (fileshortname, desc, turn_mb(filesize), "MB", name))
+    fileshortname = filefullname.replace('./diff_folder/new/Android', '')
+    print('%-35s%-8s%-6s%-6s%-20s' % (fileshortname, desc, turn_mb(filesize), "MB", name))
     return filesize, fileshortname.startswith("/dynamicres")
 
 
