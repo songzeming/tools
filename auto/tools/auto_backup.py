@@ -40,4 +40,7 @@ for z_name in z_list:
 # 压缩HotUpdate，备份热更文件
 os.system("echo '正在压缩HotUpdate' && cd ../../client_online && zip -q -r -o '../{path}/HotUpdate.zip' HotUpdate".format(path=filename_origin))
 
+# 备份Bundles
+os.system("echo '备份Bundles' && cd ../../client_online && zip -q -r -o '../{path}/Production.zip' Product".format(path=filename_origin))
+
 print("备份完成\n")
