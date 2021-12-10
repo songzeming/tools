@@ -2,6 +2,7 @@
 # -*- coding: UTF-8 -*-
 
 import os
+import time
 
 # 将config: develop -> release
 print("将config: develop -> release")
@@ -19,6 +20,7 @@ os.system("cd ../diff_hot_update/diff_folder && git add . && git commit -m 'auto
 
 # 设置tag并推送到远端
 print("设置tag并推送到远端")
+time_nyr = time.strftime("%Y%m%d", time.localtime())
 os.system("cd ../../client_online && git tag v{version} && git push origin v{version}".format(version=time_nyr))
 
 print("线上备份完成")

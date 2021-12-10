@@ -8,6 +8,9 @@ auto_backup:
 	python ./tools/auto_backup.py
 
 auto_backup_online:
+	python ./tools/auto_backup_online.py
+
+auto_backup_all:
 	python ./tools/auto_backup.py
 	python ./tools/auto_backup_online.py
 
