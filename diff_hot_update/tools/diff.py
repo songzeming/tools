@@ -49,8 +49,8 @@ def calculate(name, file, desc):
     filesize = os.path.getsize(file)
     filefullname = os.path.dirname(file)
     filesplit = filefullname.split('/')
-    if len(filesplit) > 5:
-        filesplit5 = filesplit[5]
+    if len(filesplit) > 4:
+        filesplit5 = filesplit[4]
         if filesplit5 != None or filesplit5 != "":
             if filelist.get(filesplit5, None) == None:
                 filelist[filesplit5] = 0
