@@ -85,4 +85,4 @@ print("")
 strdiffsize = str(turn_mb(diffsize)) + "MB"
 strdyanmicsize = str(turn_mb(dynamicsize)) + "MB"
 strtotalsize = str(turn_mb(diffsize + dynamicsize)) + "MB"
-print("热更大小: " + strtotalsize + "（热更新: " + strdiffsize + "，动态资源: " + strdyanmicsize + "）")
+print("热更大小：" + strtotalsize + "（热更新: " + strdiffsize + "，动态资源: " + strdyanmicsize + "）")

@@ -16,6 +16,7 @@ os.system("cd ../../client_online && make puzzle_verify")
 os.system("cd ../../client_online/Generator/PuzzleVerify && git add . && git commit -m 'auto: 三消校验' && git push")
 
 # 自动备份热更对比文件(git-submodule)
+print("自动备份热更对比文件")
 os.system("cd ../diff_hot_update/diff_folder && git add . && git commit -m 'auto: 发版本热更文件备份'")
 
 # 设置tag并推送到远端
