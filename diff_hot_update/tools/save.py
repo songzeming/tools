@@ -4,7 +4,7 @@
 import os
 import shutil
 
-hot_update_path = "../../client_online/HotUpdate/"
+hot_update_path = "../../jenkins/workspace/p601_release/HotUpdate/"
 dirs = os.listdir(hot_update_path)
 
 shutil.rmtree("diff_folder/new/", ignore_errors=True)
