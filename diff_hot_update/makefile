@@ -1,6 +1,6 @@
 copy:
-	python ./tools/copy.py
+	python3 ./tools/copy.py
 diff:
-	python ./tools/diff.py
+	python3 ./tools/diff.py
 save:
-	python ./tools/save.py
+	python3 ./tools/save.py
