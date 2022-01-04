@@ -12,6 +12,9 @@ os.mkdir(filename)
 # 备份Bundles
 os.system("echo '备份Bundles' && cd ../../client_online && pwd && zip -q -r -o '../{path}/Production.zip' Product".format(path=filename_origin))
 
+# 压缩HotUpdate，备份热更文件
+os.system("echo '正在压缩HotUpdate' && cd ../../client_online && zip -q -r -o '../{path}/HotUpdate.zip' HotUpdate".format(path=filename_origin))
+
 # 自动备份热更对比文件(git-submodule)
 print("自动备份热更对比文件")
 os.system("cd ../diff_hot_update/diff_folder && git add . && git commit -m 'auto: 发热更文件备份'")

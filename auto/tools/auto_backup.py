@@ -28,12 +28,12 @@ for i in range(0, len(list)):
         print("备份apk成功")
 
 # 更新svn
-up_list = {"config", "FairyGUI", "DynamicRes"}
+up_list = {"config", "FairyGUI"}
 for u_name in up_list:
     os.system("cd ../../{file} && svn up".format(file=u_name))
 
-# 压缩config、FairyGUI、DynamicRes文件
-z_list = {"config", "FairyGUI", "DynamicRes"}
+# 压缩config、FairyGUI文件
+z_list = {"config", "FairyGUI"}
 for z_name in z_list:
     os.system("echo '正在压缩{file}' && zip -q -r -o '{path}/{file}.zip' ../../{file}".format(file=z_name, path=filename))
 

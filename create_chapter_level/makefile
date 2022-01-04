@@ -1,2 +1,2 @@
 auto_create:
-	python ./tools/auto_backup.py
+	python ./tools/create_chapter_level.py
